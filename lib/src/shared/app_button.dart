@@ -66,6 +66,7 @@ class AppBackButton extends StatelessWidget {
       child: Container(
         width: 40.r,
         height: 40.r,
+        margin: const EdgeInsets.only(top: 16).r,
         clipBehavior: Clip.antiAlias,
         decoration: ShapeDecoration(
           shape: RoundedRectangleBorder(
