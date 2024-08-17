@@ -50,14 +50,7 @@ class SigninPinView extends ConsumerWidget {
           24.verticalSpace,
           NumberPadUi(
             onChanged: controller.onAccountPinChanged,
-            onDeleteTap: () {
-              if (controller.accountPinController.text.isNotEmpty) {
-                controller.accountPinController.text =
-                    controller.accountPinController.text.substring(
-                        0, controller.accountPinController.text.length - 1);
-              }
-            },
-            defaultValue: '',
+            defaultValue: controller.accountPinController.text,
             mainAxisAlignment: MainAxisAlignment.end,
           ),
         ],

@@ -1,5 +1,4 @@
 import 'package:smart_pay/src/core/_core.dart';
-import 'package:smart_pay/src/shared/line.dart';
 
 class SocialOr extends StatelessWidget {
   const SocialOr({

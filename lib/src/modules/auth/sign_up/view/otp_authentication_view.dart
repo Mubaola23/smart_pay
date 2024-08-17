@@ -49,12 +49,6 @@ class OtpAuthenticationView extends ConsumerWidget {
           24.verticalSpace,
           NumberPadUi(
             onChanged: controller.onOtpChanged,
-            onDeleteTap: () {
-              if (controller.pinController.text.isNotEmpty) {
-                controller.pinController.text = controller.pinController.text
-                    .substring(0, controller.pinController.text.length - 1);
-              }
-            },
             defaultValue: controller.pinController.text,
             mainAxisAlignment: MainAxisAlignment.end,
           ),

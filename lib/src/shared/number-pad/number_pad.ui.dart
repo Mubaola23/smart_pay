@@ -8,11 +8,9 @@ class NumberPadUi extends StatelessWidget {
     // required this.maxLength,
     required this.defaultValue,
     this.mainAxisAlignment,
-    required this.onDeleteTap,
     this.faceTap,
   });
   final void Function(String) onChanged;
-  final void Function() onDeleteTap;
   final Function()? faceTap;
 
   // final int maxLength;
@@ -25,6 +23,14 @@ class NumberPadUi extends StatelessWidget {
     onChanged(newVal);
 
     return;
+  }
+
+  void _removeValue() {
+    var newVal = '';
+    if (defaultValue.isNotEmpty) {
+      newVal = defaultValue.substring(0, defaultValue.length - 1);
+    }
+    onChanged(newVal);
   }
 
   @override
@@ -146,7 +152,7 @@ class NumberPadUi extends StatelessWidget {
                 iconString: AppImages.delete,
                 isIcon: true,
                 text: '',
-                onTap: onDeleteTap,
+                onTap: _removeValue,
               ),
             ),
           ],
