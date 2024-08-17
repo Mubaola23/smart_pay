@@ -17,10 +17,12 @@ class SmartPay extends ConsumerWidget {
             // title: new Text('Are you sure?'),
             content: const Text('Do you want to exit the App'),
             actions: <Widget>[
+              
               TextButton(
                 onPressed: () => Navigator.of(context).pop(false),
                 child: const Text('No'),
               ),
+
               TextButton(
                 onPressed: () async {
                   Navigator.of(context).pop(true);

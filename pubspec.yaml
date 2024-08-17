@@ -55,6 +55,8 @@ flutter:
     - assets/svgs/
     - assets/pngs/
     - assets/svgs/icons/
+    - assets/cert/certificate.pem
+
 
 
   fonts:
